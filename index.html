@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Talento coex DR">
+    <meta name="description" content="diseño web con coex">
+    <meta name="keywords" content="aprende logica, html, css, javascript, bd, vue.js, laravel"/>
+    <title>resumen_Dom</title>
+    <link rel="stylesheet" href="./style.css">
+    <!--bootstrap-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!--cambio icono-->
+    <link rel="icon"  type="image/png" sizes="32x32" href="./images/js_icon.png">
+</head>
+<body>
+    <header>
+        <h1>EJERCICIOS  DOM</h1>
+    </header>
+    <main>
+        <section >
+            <!--ejercicio 1-->
+            <h2 class="titulo">EJERCICIO 1</h2>
+            <form action="#" class="ejercicios" >
+                <select  id="elegirColor">
+                    <option value="ff0000">Red</option>
+                    <option value="00ff00">Green</option>
+                    <option value="0000ff">Blue</option>
+                    <option value="FFFF00">Yellow</option>
+                    <option value="000000">black</option>
+                </select>
+                <label for="numberIndex">Number index selected:</label>
+                <input type="number" id="numberIndex" class="texto">
+                <label for="textSelect">Text selected:</label>
+                <input type="text" id="textSelect" class="texto">
+                <label for="colorCode">Color value selected:</label>
+                <input type="text" id="colorCode" class="texto">
+                <input type="color"  id="colorValue">
+            </form>
+            <!--ejercicio 1-->
+        </section>
+        <section  class="ejercicios">
+            <!--ejercicio 2-->
+            <h2 class="titulo">EJERCICIO 2</h2>
+            <label class="texto" for="descripcion">Descripcion</label>
+            <br>
+            <textarea cols="60" rows="15" id="descripcion"></textarea>
+            <button id="enviar" class="botones">enviar</button>
+            <!--ejercicio 2-->
+        </section>
+        <section class="ejercicios">
+            <!--ejercicio 3-->
+            <h2 class="titulo">EJERCICIO 3</h2>
+            <label for="ingreso_text">Expresion regular. Ejemplo: Letra+vocal</label>
+            <input type="text" id="ingreso_text">
+            <p id="casilla1AlertaEj3"></p>
+            <button class="botones" id="boton1_validar_Eje3">Validar</button  >
+            <label for="eRLeVoNuLongitud">Expresion regular. Ejemplo: Letra+vocal+Numero+longitud</label>
+            <input type="text" id="eRLeVoNuLongitud">
+            <p id="casilla2AlertaEj3"></p>
+            <button class="botones" id="boton2_validar_Eje3">Validar</button >
+            <label for="eRNumeros">Expresion regular. Numeros</label>
+            <input type="number" id="eRNumeros">
+            <p id="casilla3AlertaEj3"></p>
+            <button class="botones" id="boton3_validar_Eje3">Validar</button >
+            <!--ejercicio 3-->
+        </section>
+        <!--ejercicio 4-->
+        <section class="ejercicios">
+            <h2 class="titulo">EJERCICIO 4</h2>
+            <label for="ingreso1Ejercicio4">Ingrese un texto</label>
+            <input type="text" id="ingreso1Ejercicio4">
+            <p id="casilla1AlertaEj4"></p>
+            <label for="ingreso2Ejercicio4">Ingrese texto max 50 caracteres</label>
+            <input type="text" id="ingreso2Ejercicio4">
+            <p id="casilla2AlertaEj4"></p>
+            <button class="botones" id="boton2_validar_Eje4">Validar</button>
+
+        </section>
+        <!--ejercicio 4-->
+        <!--ejercicio 5-->
+        <section class="ejercicios">
+            <h2 class="titulo">EJERCICIO 5</h2>
+            <div>
+                <h3 class="subtitulo">GALERIA</h3>
+                <div class="contenedor-border"><img class="contenedorImgPrincipalEje5" src="./images/image1Eje5.png" alt="img1" width="500px" height="500px" name="primera" id="pantalla"></div>
+                <div class="subcontenedorEje5">
+                  <!-- 
+                    primer metodo
+                     <div class="contenedorIndividualEje5"><img src="./images/image2Eje5.png" alt="img2" width="100px" height="100%" name="primera" onclick="muestra('primera')"></div> 
+                    <div class="contenedorIndividualEje5"><img src="./images/image3Eje5.png" alt="img3" width="100px" height="100%" name="primera" onclick="muestra('segunda')"></div>
+                    <div class="contenedorIndividualEje5"><img src="./images/image4Eje5.png" alt="img4" width="100px" height="100%" name="primera" onclick="muestra('tercera')"></div> 
+                    <div class="contenedorIndividualEje5"><img src="./images/image5Eje5.png" alt="img5" width="100px" height="100%" name="primera" onclick="muestra('cuarta')"></div></div>
+                -->
+                <!--segundo metodo-->
+                    <div class="contenedorIndividualEje5"><img src="./images/image2Eje5.png" alt="img2" width="100px" height="100%" id="imgUno" ></div> 
+                    <div class="contenedorIndividualEje5"><img src="./images/image3Eje5.png" alt="img3" width="100px" height="100%" id="imgDos"></div>
+                    <div class="contenedorIndividualEje5"><img src="./images/image4Eje5.png" alt="img4" width="100px" height="100%" id="imgTres"></div> 
+                    <div class="contenedorIndividualEje5"><img src="./images/image5Eje5.png" alt="img5" width="100px" height="100%" id="imgCuatro"></div>
+                </div>
+
+            </div>
+        </section>
+        <!--ejercicio 5-->
+        <!--ejercicio 6-->
+        <section class="ejercicios" id="contenedorEje6">
+            <h2 class="titulo">EJERCICIO 6</h2>
+            <!--botones-->
+            <div class="contenedorBotones">
+                <input type="button" value="Crear" class="botones" id="btnCrearEje6">
+                <input type="button" value="Duplicar" class="botones" id="btnDuplicarEje6">
+                <input type="button" value="Eliminar" class="botones" id="btnEliminarEje6">
+            </div>
+            <!--aca aparecen los pararafos creados-->
+            <div id="contenedorPeje6">
+
+            </div>
+        </section>
+        <section class="ejercicios">
+            <div class="container">
+                <div class="card card-body col-sm-12">
+                    <h4 class="title fs-1">Agregar elementos</h4>
+                    <form action="" class="form col-auto mb-3" id="frmLista">
+                        <input type="text" id="textElement" class="form-control" placeholder="Escribir elemento">
+                        <input type="submit" value="AGREGAR" class="btn btn-ligth btn-outline-primary">
+                    </form>
+                    <h4>Elementos</h4>
+                    <ul class="list-group" id="elementos">
+                        <li class="list-group-item">Elemento1<button class="btn btn-light btn-outline-danger float-end delete">X</button>
+                        </li>
+                        <li class="list-group-item">Elemento2<button class="btn btn-light btn-outline-danger float-end delete">X</button>
+                        </li>
+                        <li class="list-group-item">Elemento3<button class="btn btn-light btn-outline-danger float-end delete">X</button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+    <footer>
+        <section>
+            <p class="creditos">Desarrolado por: Juan David Toloza Ortega</p>
+        </section>
+    </footer>
+
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
