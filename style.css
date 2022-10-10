@@ -78,3 +78,18 @@ clase bases titulos y footer, etc */
 .contenedorIndividualEje5:hover{
     cursor: pointer;
 }
+/* validación textarea */
+textarea:valid { border-color: #55d688;}
+textarea:invalid { border-color: #fd4444;}
+
+
+@keyframes shake{
+    0%, 100% {transform: translateX(0);}
+    25% {transform: translateX(8px);}
+    75% { transform: translateX(-8px);}
+}
+
+textarea:invalid{animation: shake 10s 0s 3;}
+#ingreso2Ejercicio4{
+    border: solid black 1px;
+}

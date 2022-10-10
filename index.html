@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Talento coex DR">
+    <meta name="author" content="Juan David Toloza Ortega">
     <meta name="description" content="diseño web con coex">
     <meta name="keywords" content="aprende logica, html, css, javascript, bd, vue.js, laravel"/>
     <title>resumen_Dom</title>
@@ -22,8 +22,9 @@
         <h1>EJERCICIOS  DOM</h1>
     </header>
     <main>
+         <!--ejercicio 1--------------------------------------------------------->
         <section >
-            <!--ejercicio 1-->
+           
             <h2 class="titulo">EJERCICIO 1</h2>
             <form action="#" class="ejercicios" >
                 <select  id="elegirColor">
@@ -41,19 +42,23 @@
                 <input type="text" id="colorCode" class="texto">
                 <input type="color"  id="colorValue">
             </form>
-            <!--ejercicio 1-->
+            
         </section>
+        <!--ejercicio 1-->
+         <!--ejercicio 2--------------------------------------------------------->
         <section  class="ejercicios">
-            <!--ejercicio 2-->
+           
             <h2 class="titulo">EJERCICIO 2</h2>
             <label class="texto" for="descripcion">Descripcion</label>
             <br>
             <textarea cols="60" rows="15" id="descripcion"></textarea>
             <button id="enviar" class="botones">enviar</button>
-            <!--ejercicio 2-->
+            
         </section>
+        <!--ejercicio 2-->
+        <!--ejercicio 3--------------------------------------------------------->
         <section class="ejercicios">
-            <!--ejercicio 3-->
+            
             <h2 class="titulo">EJERCICIO 3</h2>
             <label for="ingreso_text">Expresion regular. Ejemplo: Letra+vocal</label>
             <input type="text" id="ingreso_text">
@@ -67,22 +72,23 @@
             <input type="number" id="eRNumeros">
             <p id="casilla3AlertaEj3"></p>
             <button class="botones" id="boton3_validar_Eje3">Validar</button >
-            <!--ejercicio 3-->
+            
         </section>
-        <!--ejercicio 4-->
+        <!--ejercicio 3-->
+        <!--ejercicio 4--------------------------------------------------------->
         <section class="ejercicios">
             <h2 class="titulo">EJERCICIO 4</h2>
             <label for="ingreso1Ejercicio4">Ingrese un texto</label>
             <input type="text" id="ingreso1Ejercicio4">
             <p id="casilla1AlertaEj4"></p>
             <label for="ingreso2Ejercicio4">Ingrese texto max 50 caracteres</label>
-            <input type="text" id="ingreso2Ejercicio4">
+            <textarea type="text" id="ingreso2Ejercicio4" cols="20" rows="10"></textarea>
             <p id="casilla2AlertaEj4"></p>
             <button class="botones" id="boton2_validar_Eje4">Validar</button>
 
         </section>
         <!--ejercicio 4-->
-        <!--ejercicio 5-->
+        <!--ejercicio 5--------------------------------------------------------->
         <section class="ejercicios">
             <h2 class="titulo">EJERCICIO 5</h2>
             <div>
@@ -106,45 +112,52 @@
             </div>
         </section>
         <!--ejercicio 5-->
-        <!--ejercicio 6-->
+        <!--ejercicio 6--------------------------------------------------------->
         <section class="ejercicios" id="contenedorEje6">
             <h2 class="titulo">EJERCICIO 6</h2>
-            <!--botones-->
-            <div class="contenedorBotones">
-                <input type="button" value="Crear" class="botones" id="btnCrearEje6">
-                <input type="button" value="Duplicar" class="botones" id="btnDuplicarEje6">
-                <input type="button" value="Eliminar" class="botones" id="btnEliminarEje6">
+            <div id="base">
+                <!-- botones -->
+                <input id="btnCrear" type="button" class="botones" value="Crear">
+
+                <input id="btnCopiar" type="button" class="botones" value="Duplicar">
+
+                <input id="btnEliminar" type="button" class="botones" value="Eliminar">
             </div>
-            <!--aca aparecen los pararafos creados-->
-            <div id="contenedorPeje6">
+             <!-- contenedor destino :D -->
+            <div id="copia">
+                <p id="nuevoTexto"></p>
+            </div>
 
             </div>
         </section>
+        <!--ejercicio 7--------------------------------------------------------->
         <section class="ejercicios">
             <div class="container">
                 <div class="card card-body col-sm-12">
                     <h4 class="title fs-1">Agregar elementos</h4>
                     <form action="" class="form col-auto mb-3" id="frmLista">
                         <input type="text" id="textElement" class="form-control" placeholder="Escribir elemento">
-                        <input type="submit" value="AGREGAR" class="btn btn-ligth btn-outline-primary">
+                        <input type="submit" value="AGREGAR" class="btn btn-ligth btn-outline-primary" id="btn1Eje7">
                     </form>
                     <h4>Elementos</h4>
                     <ul class="list-group" id="elementos">
-                        <li class="list-group-item">Elemento1<button class="btn btn-light btn-outline-danger float-end delete">X</button>
+                        <li class="list-group-item" id="ElemetoLi">Elemento1<button class="btn btn-light btn-outline-danger float-end delete" id="btnEliminarEje7">X</button>
                         </li>
-                        <li class="list-group-item">Elemento2<button class="btn btn-light btn-outline-danger float-end delete">X</button>
+                        <li class="list-group-item" id="ElemetoLi">Elemento2<button class="btn btn-light btn-outline-danger float-end delete" id="btnEliminarEje7">X</button>
                         </li>
-                        <li class="list-group-item">Elemento3<button class="btn btn-light btn-outline-danger float-end delete">X</button>
+                        <li class="list-group-item" id="ElemetoLi">Elemento3<button class="btn btn-light btn-outline-danger float-end delete" id="btnEliminarEje7">X</button>
                         </li>
                     </ul>
 
                 </div>
             </div>
         </section>
+        <!--ejercicio 7-->
 
         
     </main>
     <footer>
+        <!--creditos aca-->
         <section>
             <p class="creditos">Desarrolado por: Juan David Toloza Ortega</p>
         </section>

@@ -1,6 +1,4 @@
-//-------------------------------------------------------------------
-//ejecicio 1
-//-------------------------------------------------------------------
+//ejercicio 1 /////////////////////////////////////////////////////////////////////////////////
 const select=document.getElementById("elegirColor");
 //valor por defecto para el input color blanco
 document.getElementById("colorValue").value="#FFFFFF";
@@ -14,9 +12,7 @@ select.addEventListener("change", ()=>{
     document.getElementById("colorCode").value=codeColor;
     const NombreColor=document.getElementById("textSelect").value=valorSelect.options[valorSelect.selectedIndex].text;
 });
-//-------------------------------------------------------------------
-//ejecicio 2
-//-------------------------------------------------------------------
+//ejercicio 2 /////////////////////////////////////////////////////////////////////////////////
 const checkearTextArea=()=>{
     let textArea=document.getElementById("descripcion");
     if(textArea.value.length<=0){
@@ -33,9 +29,7 @@ const checkearTextArea=()=>{
 let btnEnviar=document.getElementById("enviar");
 btnEnviar.addEventListener("click",checkearTextArea);
 
-//-------------------------------------------------------------------
-//ejecicio 3
-//-------------------------------------------------------------------
+//ejercicio 3/////////////////////////////////////////////////////////////////////////////////
 let patronLetra=/[a-zA-Z]/;
 let patronVocal=/[aeiouAEIOU]/;
 let patronNumeros=/[0-9]{1}/;
@@ -88,9 +82,7 @@ function validarTexto3(){
 const btn7=document.getElementById("boton3_validar_Eje3");
 btn7.addEventListener("click",validarTexto3);
 
-//-------------------------------------------------------------------
-//ejecicio 4
-//-------------------------------------------------------------------
+//ejercicio 4 /////////////////////////////////////////////////////////////////////////////////
 //primer input------------------------------------------
 let ingreso1Eje4=document.getElementById("ingreso1Ejercicio4")
 ingreso1Eje4.addEventListener("input", ()=>{
@@ -142,27 +134,77 @@ imagen3.addEventListener("click", ()=>muestra(3));
 imagen4.addEventListener("click", ()=>muestra(4));
 
 //ejercicio 6 /////////////////////////////////////////////////////////////////////////////////
-///crear
-const btnCrearEje6=document.getElementById("btnCrearEje6");
-btnCrearEje6.addEventListener("click", ()=>{
-    const nuevoP = document.createElement("p");
-    nuevoP.setAttribute("id", "pEje6");
-    const texto1Eje6 = document.createTextNode("nuevo parrafo creado");
-    nuevoP.appendChild(texto1Eje6);
-    document.getElementById("contenedorPeje6").appendChild(nuevoP);
-})
-/// duplicar
+//////////////////////////////////////////////////
+const nuevoElemento = document.createElement("p");
+// creamos un nodo de texto
+// tambien se puede con let inputText = prompt("Ingrese el texto: ")
+const nuevoTexto = document.createTextNode("Insertando nuevo texto - coex")
+// opción 1
+const nuevoNodo = nuevoElemento.appendChild(nuevoTexto)
+//crear un nuevo nodo
+// funciones----------------------
+//crear
+function fnCrear(){
+    let contenedor = document.getElementById("nuevoTexto");
+    contenedor.appendChild(nuevoNodo);
+}
+//copiar
+function fnCopiar(){
+    let copiarNodo = document.getElementById("nuevoTexto");
+    copia = copiarNodo.cloneNode(true);
+    document.getElementById("copia").appendChild(copia);
+}
+//eliminar
+function fnEliminar(){
+    let eliminarNodo = document.getElementById("nuevoTexto");
+    eliminarNodo.parentNode.removeChild(eliminarNodo);
+}
+//captura de eventos
+let btn1Eje7 = document.getElementById('btnCrear');
+btn1Eje7.addEventListener('click', fnCrear);
 
-const btnDuplicarEje6=document.getElementById("btnDuplicarEje6");
-btnDuplicarEje6.addEventListener("click", ()=>{
-    const copiarNodo = document.getElementById("pEje6");
-    copia=copiarNodo.cloneNode(true);
-    document.getElementById("contenedorPeje6").appendChild(copia);
-})
-/// eliminar
-const btnEliminarEje6=document.getElementById("btnEliminarEje6");
-btnEliminarEje6.addEventListener("click", ()=>{
-    const eliminarP = document.getElementById("pEje6");
-    document.getElementById("contenedorPeje6").removeChild(eliminarP);
-})
+let btn2Eje7= document.getElementById('btnEliminar');
+btn2Eje7.addEventListener('click', fnEliminar);
+
+let btn3Eje7 = document.getElementById('btnCopiar');
+btn3Eje7.addEventListener('click', fnCopiar);
+
+
+
 //ejercicio 7 /////////////////////////////////////////////////////////////////////////////////
+///crear elemento
+let listaElementos = document.querySelector("#elementos");
+
+//--Enviar el evento submit
+let form = document.querySelector("#frmLista");
+form.addEventListener("submit", fnAgregarElemento);
+//--Enviar Eliminar evento
+listaElementos.addEventListener("click", fnEliminarElemento);
+
+// Listado de funciones
+//funcion de agregar
+function fnAgregarElemento(evento){
+    evento.preventDefault();
+    const ingreso1Eje7=document.getElementById("textElement").value;
+    const nuevoEle = document.createElement("li");
+    nuevoEle.className='list-group-item';
+    const nuevoBoton = document.createElement("button");
+    nuevoBoton.className='btn btn-light btn-outline-danger float-end delete';
+    nuevoBoton.appendChild(document.createTextNode("X"));
+    nuevoEle.appendChild(document.createTextNode(ingreso1Eje7));
+    nuevoEle.appendChild(nuevoBoton);
+    document.getElementById("elementos").appendChild(nuevoEle); 
+    
+}
+//funcion de eliminar
+function fnEliminarElemento(evento){
+    // comprobar los elementos de la clase 'delete'
+    if(evento.target.classList.contains("delete")){
+        // mostrar en pantalla la alerta :D
+        if(confirm("¿Seguro de eliminar Elemento?")){
+            let li = evento.target.parentElement;
+            listaElementos.removeChild(li);
+        }
+    }
+
+}
